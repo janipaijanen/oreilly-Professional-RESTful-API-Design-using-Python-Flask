@@ -18,8 +18,8 @@ RUN apt-get update && apt-get install -y --force-yes \
 
 
 RUN systemctl enable mongod.service
-RUN systemctl start mongod
-RUN systemctl status mongod
+#RUN systemctl start mongod.service
+#RUN systemctl status mongod.service
 
 RUN mkdir /opt/pets-api
 

@@ -5,4 +5,4 @@ home_app = Blueprint('home_app', __name__)
 
 @home_app.route('/')
 def home():
-    return 'Hello, World'
+    return 'Hello, World!'
