@@ -13,6 +13,9 @@ def create_app(**config_overrides):
     db.init_app(app)
 
     from home.views import home_app
+    from pet.views import pet_app
 
     app.register_blueprint(home_app)
+    app.register_blueprint(pet_app)
+    
     return app
