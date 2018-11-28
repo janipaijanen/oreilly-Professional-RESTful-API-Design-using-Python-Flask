@@ -35,4 +35,20 @@ which should state something like "mongo" in the IMAGE column.
 docker-compose run --service-ports web
 ```
 ## Browsing
-Due to a networking configuration done in the examples, the app listens on localhost, that is, http://127.0.0.1. 
+Due to a networking configuration done in the examples, the app listens on localhost, that is, http://127.0.0.1.
+
+# Relevant information
+## HTTP Status Codes
+ HTTP Status Codes: http://www.restapitutorial.com/httpstatuscodes.html
+### 2xx Client Succes (OK)
+ - 200 OK
+ - 201 OK as return to post (insert)
+ - 204 OK as return to delete
+### 4xx Client Error (NOK)
+ - 400 NOK as return to malformed (bad) request
+ - 401 NOK as return to access failed request (invalid access (credentials))
+ - 403 NOK as return to unauthorized request (invalid authorization)
+ - 404 NOK as return to not found
+ - 409 NOK as return in conflict case (duplicate records)
+### 5xx Server error (NOK)
+ - 500 NOK
