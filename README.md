@@ -65,7 +65,7 @@ Due to a networking configuration done in the examples, the app listens on local
 
 ## Connect to mongodb from application Server
 
-Pay attentention to the NAMES. Pick the one that starts with `petsapi_web_run_`
+Pay attentention to the NAMES column. Pick the one that starts with `petsapi_web_run_`
 ```bash
  docker ps
 ```
@@ -76,6 +76,8 @@ docker exec -it petsapi_web_run_12 mongo --host mongodb
 opens a shell in our mongodb instance.
 
 ## Running tests
+Pay attentention to the NAMES column. Pick the one that starts with `petsapi_web_run_`
+In my case this was changed due a typo I did. So now what works is.
 ```bash
  docker ps
  docker exec -it petsapi_web_run_13 python tests.py
