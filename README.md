@@ -52,3 +52,25 @@ Due to a networking configuration done in the examples, the app listens on local
  - 409 NOK as return in conflict case (duplicate records)
 ### 5xx Server error (NOK)
  - 500 NOK
+
+
+ ## Modifying Python dependecies
+ If in need to modify python dependencies, i.e. the the requirements.txt, then
+ - modify the file
+ - rebuild the docker image and relaunch the flask services
+ ```bash
+  docker-compose build
+  docker-compose run --service-ports web
+ ```
+
+## Connect to mongodb from application Server
+
+Pay attentention to the NAMES. Pick the one that starts with `petsapi_web_run_`
+```bash
+ docker ps
+```
+In my case this was `petsapi_web_run_12`, so issuing the command
+```bash
+docker exec -it petsapi_web_run_12 mongo --host mongodb
+```
+opens a shell in our mongodb instance.
