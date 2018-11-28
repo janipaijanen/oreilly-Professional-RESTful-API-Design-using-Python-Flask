@@ -74,3 +74,9 @@ In my case this was `petsapi_web_run_12`, so issuing the command
 docker exec -it petsapi_web_run_12 mongo --host mongodb
 ```
 opens a shell in our mongodb instance.
+
+## Running tests
+```bash
+ docker ps
+ docker exec -it petsapi_web_run_13 python tests.py
+```
